@@ -190,9 +190,9 @@ export default function PdfChatbot() {
                 <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
                     <div className="flex items-center">
                         <button onClick={navigateToFileUpload} className="mr-4 p-1 rounded-full hover:bg-gray-100">
-                            <ArrowLeft size={20} />
+                            <ArrowLeft size={20} className="text-black" />
                         </button>
-                        <h1 className="text-2xl font-semibold text-gray-900">Medical Document Assistant</h1>
+                        <h1 className="text-2xl font-semibold text-black">Medical Document Assistant</h1>
                     </div>
                 </div>
             </header>
@@ -202,7 +202,7 @@ export default function PdfChatbot() {
                 {/* Sidebar - Document List */}
                 <div className="w-64 bg-white shadow-md p-4 hidden md:block">
                     <h2 className="font-medium mb-4">Your Documents</h2>
-                    <p className="text-sm text-gray-600 mb-2">Select documents to provide context for your questions:</p>
+                    <p className="text-sm text-black mb-2">Select documents to provide context for your questions:</p>
 
                     <div className="space-y-2">
                         {uploadedFiles.map((file) => (
@@ -220,7 +220,7 @@ export default function PdfChatbot() {
                     </div>
 
                     {selectedFiles.length > 0 && (
-                        <div className="mt-4 text-sm text-gray-600">
+                        <div className="mt-4 text-sm text-black">
                             {selectedFiles.length} document{selectedFiles.length !== 1 ? "s" : ""} selected
                         </div>
                     )}
@@ -239,7 +239,7 @@ export default function PdfChatbot() {
 
                         <div className="flex flex-wrap gap-2">
                             {selectedFiles.length === 0 ? (
-                                <p className="text-sm text-gray-500">No documents selected</p>
+                                <p className="text-sm text-black">No documents selected</p>
                             ) : (
                                 uploadedFiles
                                     .filter((file) => selectedFiles.includes(file.id))
@@ -276,16 +276,16 @@ export default function PdfChatbot() {
                                             {message.sender === "user" ? (
                                                 <User size={20} className="text-blue-600" />
                                             ) : (
-                                                <Bot size={20} className="text-gray-600" />
+                                                <Bot size={20} className="text-black" />
                                             )}
                                         </div>
                                         <div>
                                             <div
-                                                className={`rounded-2xl px-4 py-2 ${message.sender === "user" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-800"}`}
+                                                className={`rounded-2xl px-4 py-2 ${message.sender === "user" ? "bg-blue-600 text-white" : "bg-gray-100 text-black"}`}
                                             >
                                                 <p className="whitespace-pre-wrap">{message.text}</p>
                                             </div>
-                                            <p className={`text-xs mt-1 ${message.sender === "user" ? "text-right" : ""} text-gray-500`}>
+                                            <p className={`text-xs mt-1 ${message.sender === "user" ? "text-right" : ""} text-black`}>
                                                 {formatTime(message.timestamp)}
                                             </p>
                                         </div>
@@ -297,10 +297,10 @@ export default function PdfChatbot() {
                                 <div className="flex justify-start">
                                     <div className="flex max-w-[80%]">
                                         <div className="flex-shrink-0 h-10 w-10 rounded-full flex items-center justify-center bg-gray-100 mr-3">
-                                            <Bot size={20} className="text-gray-600" />
+                                            <Bot size={20} className="text-black" />
                                         </div>
                                         <div>
-                                            <div className="rounded-2xl px-4 py-2 bg-gray-100 text-gray-800">
+                                            <div className="rounded-2xl px-4 py-2 bg-gray-100 text-black">
                                                 <div className="flex space-x-2">
                                                     <div
                                                         className="w-2 h-2 rounded-full bg-gray-400 animate-bounce"
@@ -334,7 +334,7 @@ export default function PdfChatbot() {
                                     onChange={(e) => setInputMessage(e.target.value)}
                                     onKeyPress={handleKeyPress}
                                     placeholder="Ask about your medical documents..."
-                                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none text-black"
                                     rows="2"
                                 ></textarea>
                             </div>
@@ -342,8 +342,8 @@ export default function PdfChatbot() {
                                 onClick={handleSendMessage}
                                 disabled={!inputMessage.trim() || isLoading || selectedFiles.length === 0}
                                 className={`ml-2 p-2 rounded-full ${!inputMessage.trim() || isLoading || selectedFiles.length === 0
-                                        ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                                        : "bg-blue-600 text-white hover:bg-blue-700"
+                                        ? "bg-gray-200 text-black cursor-not-allowed"
+                                        : "bg-blue-600 text-black hover:bg-blue-700"
                                     }`}
                             >
                                 <Send size={20} />
@@ -354,7 +354,7 @@ export default function PdfChatbot() {
                                 Please select at least one document from the sidebar to provide context for your questions.
                             </p>
                         )}
-                        <p className="text-xs text-gray-500 mt-2 text-center">
+                        <p className="text-xs text-black mt-2 text-center">
                             This AI assistant analyzes your medical documents to provide relevant information. For medical
                             emergencies, please contact your doctor directly.
                         </p>

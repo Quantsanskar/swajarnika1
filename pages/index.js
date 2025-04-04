@@ -174,7 +174,7 @@ export default function Home() {
           <section className="text-center mb-12">
             <h1
               ref={headerRef}
-              className="text-5xl md:text-6xl font-bold mb-4 text-blue-600 tracking-wide"
+              className="text-5xl md:text-6xl font-bold mb-4 text-black tracking-wide"
             >
               Swajarnika
             </h1>
@@ -182,7 +182,7 @@ export default function Home() {
               ref={taglineRef}
               className="mb-6"
             >
-              <p className="text-xl md:text-2xl font-medium text-blue-500">
+              <p className="text-xl md:text-2xl font-medium text-black">
                 The Future of Healthcare
               </p>
             </div>
@@ -190,7 +190,7 @@ export default function Home() {
               ref={descriptionRef}
               className="max-w-2xl mx-auto"
             >
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-black leading-relaxed">
                 Empowering healthcare through seamless connectivity between doctors and patients.
                 Our platform provides advanced telemedicine solutions with secure communication,
                 appointment scheduling, and comprehensive health records management.
@@ -302,7 +302,7 @@ export default function Home() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium shadow-md transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                    className="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-black rounded-lg font-medium shadow-md transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                   >
                     Sign In
                   </button>
@@ -385,7 +385,7 @@ export default function Home() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium shadow-md transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                    className="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-black rounded-lg font-medium shadow-md transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                   >
                     Sign In
                   </button>
