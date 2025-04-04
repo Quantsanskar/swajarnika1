@@ -2,7 +2,7 @@
 // This file would contain API functions to interact with your Django backend
 
 // Base API URL
-const API_BASE_URL = "/api"
+const API_BASE_URL = "http://127.0.0.1:8000/api"
 
 // Helper function for making API requests
 async function apiRequest(endpoint, method = "GET", data = null) {
